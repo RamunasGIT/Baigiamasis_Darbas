@@ -14,27 +14,45 @@
 -->
 
 ## **README.md content:**<br>
+
 * Link to the test page
 * Descriptions of test scenarios and their steps
 * README.md syntax in link
 
 ### Link to the test page:
-* Link to the test page: [ https://ltglink.lt/](https://ltglink.lt/) 
+
+* Link to the test page: [ https://ltglink.lt/](https://ltglink.lt/)
 
 ### Descriptions of test scenarios and their steps:
 
-1. Test:
+1. Test: "FakePromoCodeTest"<br>
+``Test will try to use fake promotion code and check what message 
+will be given``
 
-Expected result:
+- Open Chrome web browser with url: https://ltglink.lt/
+- Click on promotion button "Naudoti akcijos kodą"
+- In promotion code field put fake promotion code "Nuolaida"
+- Click on promotion code button to activate promotion
+- Activate delay for the webpage will be able to check code and show result text
+- Read promo code message at the header of webpage and put it to "actualResult"
+- Check if "actualResult" contains "expectedResult" (Screenshot on test failure)
+- Close Chrome web browser
+
+Expected result: After use of fake promo code the webpage will show message that
+the code is wrong: "Įvestas akcijos kodas neteisingas"
+
 2. Test:
 
 Expected result:
+
 3. Test:
 
 Expected result:
+
 4. Test:
 
 Expected result:
+
 5. Test:
 
 Expected result:
