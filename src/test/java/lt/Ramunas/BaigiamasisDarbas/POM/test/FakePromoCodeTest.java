@@ -21,7 +21,7 @@ public class FakePromoCodeTest extends BaseTest {
         FirstTestPage.clickPromotionButton(); //Click on "Naudoti akcijos koda"
         FirstTestPage.inputPromotionCode(promotionCode); //input promo code
         FirstTestPage.clickToActivatePromotionCodeButton(); //click promo code button
-        FirstTestPage.sleep(1000); // delay for the webpage to show promo result text
+        FirstTestPage.sleep(1000);
         actualResult = FirstTestPage.readPromotionCodeMessage(); //read promo code message
         Assert.assertTrue(actualResult.contains(expectedResult)); //compare if actualResult contains expectedResult
 

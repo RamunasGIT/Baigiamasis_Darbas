@@ -24,6 +24,7 @@ public class Driver {
 
         driverThread.set(new ChromeDriver(chromeOptions));
         driverThread.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // 10 seconds
+
     }
 
     public static WebDriver getDriver() {

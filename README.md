@@ -41,11 +41,27 @@ will be given``
 Expected result: After use of fake promo code the webpage will show message that
 the code is wrong: "Įvestas akcijos kodas neteisingas"
 
-2. Test:
+2. Test: "ChangeLanguageTesting"<br>
+``Test will switch between Lithuanian and English languages and check if it will happen``
 
-Expected result:
+- Open Chrome web browser with url: https://ltglink.lt/
+- Click on language bar to open language menu
+- Click on English language radio button
+- wait for the webpage to load English language
+- Get language name and put it to actualResult variable
+- Compare if actualResult contains expectedResultEN
+- Click on language bar to open language menu
+- Click on Lithuania language radio button
+- wait for the webpage to load Lithuanian language
+- Get language name and put it to actualResult variable
+- Compare if actualResult contains expectedResultLT
+- If any failure - make screenshot.
+- Close Chrome web browser. 
 
-3. Test:
+Expected result: Webpage language will be successfully switched between Lithuanian and English languages and will load back to Lithuanian language
+
+
+3. Test: 
 
 Expected result:
 

@@ -6,10 +6,6 @@ public class FirstTestPage {
         Common.openUrl("https://ltglink.lt");
     }
 
-    public static void close() {
-        Common.closeDriver();
-    }
-
     public static void clickPromotionButton() {
         Common.clickElement(Locators.PromotionField.buttonField);
     }
@@ -29,5 +25,21 @@ public class FirstTestPage {
 
     public static void sleep(int miliSeconds) {
         Common.sleep(miliSeconds);
+    }
+
+    public static void clickOnLanguageBar() {
+        Common.clickElement(Locators.LanguageBar.buttonOpenLanguageMenu);
+    }
+
+    public static void clickOnEnLanguage() {
+        Common.clickElement(Locators.LanguageBar.buttonEnglishLanguage);
+    }
+
+    public static String checkLanguageName() {
+        return Common.getElementText(Locators.LanguageBar.languageStatus);
+    }
+
+    public static void clickOnLtLanguage() {
+        Common.clickElement(Locators.LanguageBar.buttonLithunianLanguage);
     }
 }
