@@ -34,8 +34,8 @@ public class Common {
         return getDriver().findElement(locator);
     }
 
-    public static void sendKeysToElement(By locator, String promotionCode) {
-        getElement(locator).sendKeys(promotionCode);
+    public static void sendKeysToElement(By locator, String text) {
+        getElement(locator).sendKeys(text);
     }
 
     public static String getElementText(By locator) {
@@ -43,12 +43,15 @@ public class Common {
     }
 
     public static void sleep(int miliSeconds) {
-
         try {
             Thread.sleep(miliSeconds);
         } catch (InterruptedException e) {
             e.printStackTrace();
             Thread.currentThread().interrupt();
         }
+    }
+
+    public static String getURL() {
+        return getDriver().getCurrentUrl();
     }
 }

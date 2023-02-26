@@ -26,8 +26,8 @@
 ### Descriptions of test scenarios and their steps:
 
 1. Test: "FakePromoCodeTest"<br>
-``Test will try to use fake promotion code and check what message 
-will be given``
+   ``Test will try to use fake promotion code and check what message
+   will be given``
 
 - Open Chrome web browser with url: https://ltglink.lt/
 - Click on promotion button "Naudoti akcijos kodą"
@@ -42,7 +42,7 @@ Expected result: After use of fake promo code the webpage will show message that
 the code is wrong: "Įvestas akcijos kodas neteisingas"
 
 2. Test: "ChangeLanguageTesting"<br>
-``Test will switch between Lithuanian and English languages and check if it will happen``
+   ``Test will switch between Lithuanian and English languages and check if it will happen``
 
 - Open Chrome web browser with url: https://ltglink.lt/
 - Click on language bar to open language menu
@@ -56,14 +56,28 @@ the code is wrong: "Įvestas akcijos kodas neteisingas"
 - Get language name and put it to actualResult variable
 - Compare if actualResult contains expectedResultLT
 - If any failure - make screenshot.
-- Close Chrome web browser. 
+- Close Chrome web browser.
 
-Expected result: Webpage language will be successfully switched between Lithuanian and English languages and will load back to Lithuanian language
+Expected result: Webpage language will be successfully switched between Lithuanian and English languages and will load
+back to Lithuanian language
 
+3. Test: SearchForTicketsTest
+   ``This test will fill travel data to search fields and activate search button``
 
-3. Test: 
+- Open tickets webpage: http://bilietas.ltglink.lt
+- Fill travel "From" field
+- Fill travel "To" field
+- Clink on Date field
+- Click on month change button
+- Then choose travel date 2023-03-08
+- Click on search button
+- Delay to show search result
+- Put current url to actualResult
+- Check if current url contains expected search date.
+- If any failure - make screenshot.
+- Close browser
 
-Expected result:
+Expected result: Expected that search results will show Vilnius-Kaunas train ticket list on 2023-03-08 date
 
 4. Test:
 

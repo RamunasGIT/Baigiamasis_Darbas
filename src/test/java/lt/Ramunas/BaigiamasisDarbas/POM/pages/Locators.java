@@ -5,6 +5,18 @@ import org.openqa.selenium.By;
 public class Locators {
 
 
+    public class TicketsSearchField {
+        public static By FromField = //put from value
+                By.xpath("//input[@aria-labelledby='stop-search-select-label-ticket-origin']");
+        public static By ToField = //put to destination value
+                By.xpath("//input[@aria-labelledby='stop-search-select-label-ticket-destination']");
+        public static By travelDateField =
+                By.xpath("//div[4]/div/button");
+        public static By travelDateMonth = By.xpath("//button[@aria-label='next month']");
+        public static By travelDateDay = By.xpath("//div[@class='DayPicker-Day' and @aria-label='Tre 2023 m. kovo 8 d.']");
+        public static By travelSearch = By.xpath("//button[@class='sc-gb70f5-0 hEoOvn sc-2p7noq-0 hoOFwQ no-hc base']");
+    }
+
     public class PromotionField {
         public static By buttonField = //promotion button field
                 By.xpath("//div[@class='sc-1x9p1xi-1 busGTG']/button[@class='sc-gb70f5-0 sc-lfu3w-0 ldiCwA fzfVgd']");
