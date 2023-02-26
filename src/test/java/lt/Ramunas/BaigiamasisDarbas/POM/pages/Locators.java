@@ -5,6 +5,14 @@ import org.openqa.selenium.By;
 public class Locators {
 
 
+    public class LoginFields {
+        public static By usernameLocator = By.xpath("//input[@name='username']");
+        public static By passwordLocator = By.xpath("//input[@type='password']");
+        public static By submitLocator = By.xpath("//button[@type='submit']");
+        public static By loginMessage = By.xpath("//div[@aria-hidden='false']//div[@class='_content']");
+    }
+
+
     public class TicketsSearchField {
         public static By FromField = //put from value
                 By.xpath("//input[@aria-labelledby='stop-search-select-label-ticket-origin']");

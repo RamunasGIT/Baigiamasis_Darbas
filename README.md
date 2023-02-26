@@ -79,9 +79,20 @@ back to Lithuanian language
 
 Expected result: Expected that search results will show Vilnius-Kaunas train ticket list on 2023-03-08 date
 
-4. Test:
+4. Test: "FakeLoginTesting"
+   `` This test will fill invalid login data, puch login button and check message from webpage``
 
-Expected result:
+- Open login webpage: https://bilietas.ltglink.lt/account/login
+- Put Username "Ramūnas" to username field.
+- Put password to password field.
+- Click on login button.
+- Wait for message to show on screen
+- Get webpage login message text and put it to actualResult.
+- Compare if actualResult contains expectedResult
+- If any failure - make screenshot.
+- Close browser
+
+Expected result: when put invalid login data Loginwebpage should show message - "Invalid login credentials".
 
 5. Test:
 
