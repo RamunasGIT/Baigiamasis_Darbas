@@ -18,12 +18,12 @@ public class HomeTest extends BaseTest {
         String expectedResult = "Įvestas akcijos kodas neteisingas";
         String actualResult;
 
-        HomePage.clickPromotionButton(); //Click on "Naudoti akcijos koda"
-        HomePage.inputPromotionCode(promotionCode); //input promo code
-        HomePage.clickToActivatePromotionCodeButton(); //click promo code button
+        HomePage.clickPromotionButton();
+        HomePage.inputPromotionCode(promotionCode);
+        HomePage.clickToActivatePromotionCodeButton();
         HomePage.sleep(1000);
-        actualResult = HomePage.readPromotionCodeMessage(); //read promo code message
-        Assert.assertTrue(actualResult.contains(expectedResult)); //compare if actualResult contains expectedResult
+        actualResult = HomePage.readPromotionCodeMessage();
+        Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
     @Test

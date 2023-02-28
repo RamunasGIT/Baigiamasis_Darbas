@@ -26,9 +26,8 @@ public class TestListener implements ITestListener {
             LocalDateTime dateTime = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_SSS");
             File screenshotFinalFile = new File(
-                    directory + dateTime.format(formatter) + "_screenshot_" + ".jpg"
+                    directory + dateTime.format(formatter) + "_screenshot" + ".jpg"
             );
-
             FileUtils.copyFile(screenshotFile, screenshotFinalFile);
         } catch (IOException e) {
             e.printStackTrace();

@@ -27,8 +27,9 @@
 ### Descriptions of test scenarios and their steps:
 
 1. Test: "FakePromoCodeTest"<br>
->Test will try to use fake promotion code and check what message
-   will be given
+
+> Test will try to use fake promotion code and check what message
+> will be given
 
 - Open Chrome web browser with url: https://ltglink.lt/
 - Click on promotion button "Naudoti akcijos kodą"
@@ -43,7 +44,8 @@ Expected result: After use of fake promo code the webpage will show message that
 the code is wrong: "Įvestas akcijos kodas neteisingas"
 
 2. Test: "ChangeLanguageTesting"<br>
->Test will switch between Lithuanian and English languages and check if it will happen
+
+> Test will switch between Lithuanian and English languages and check if it will happen
 
 - Open Chrome web browser with url: https://ltglink.lt/
 - Click on language bar to open language menu
@@ -63,7 +65,8 @@ Expected result: Webpage language will be successfully switched between Lithuani
 back to Lithuanian language
 
 3. Test: SearchForTicketsTest<br>
->This test will fill travel data to search fields and activate search button
+
+> This test will fill travel data to search fields and activate search button
 
 - Open tickets webpage: http://bilietas.ltglink.lt
 - Fill travel "From" field
@@ -81,7 +84,8 @@ back to Lithuanian language
 Expected result: Expected that search results will show Vilnius-Kaunas train ticket list on 2023-03-08 date
 
 4. Test: "FakeLoginTesting"<br>
-> This test will fill invalid login data, puch login button and check message from webpage
+
+> This test will fill invalid login data, push login button and check message from webpage
 
 - Open login webpage: https://bilietas.ltglink.lt/account/login
 - Put Username "Ramūnas" to username field.
@@ -96,7 +100,8 @@ Expected result: Expected that search results will show Vilnius-Kaunas train tic
 Expected result: when put invalid login data Loginwebpage should show message - "Invalid login credentials".
 
 5. Test: "PrivacyTest"<br>
->Test will change cookie setting and check if change is set
+
+> Test will change cookie setting and check if change is set
 
 - Open Privacy webpage: https://ltglink.lt/privatumo-pranesimas
 - Click on edit CookieSettings button

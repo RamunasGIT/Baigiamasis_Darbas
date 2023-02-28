@@ -14,18 +14,17 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void FakeLoginTesting() {
-        // test try to login with fake data
         String loginName = "Ramūnas";
         String loginPasword = "!123456789";
         String expectedResult = "Neteisingi prisijungimo duomenys";
         String actualResult;
 
-        LoginPage.inputUserName(loginName); // Put Username
-        LoginPage.inputPassword(loginPasword); // Put password
-        LoginPage.clickToLogin(); // click on login button
-        LoginPage.sleep(1000); // wait for message
-        actualResult = LoginPage.checkLoginMessage(); //put webpage login message text to actualResult
-        Assert.assertTrue(actualResult.contains(expectedResult)); //compare if actualResult contains expectedResult
+        LoginPage.inputUserName(loginName);
+        LoginPage.inputPassword(loginPasword);
+        LoginPage.clickToLogin();
+        LoginPage.sleep(1000);
+        actualResult = LoginPage.checkLoginMessage();
+        Assert.assertTrue(actualResult.contains(expectedResult));
         LoginPage.sleep(1000);
     }
 }
