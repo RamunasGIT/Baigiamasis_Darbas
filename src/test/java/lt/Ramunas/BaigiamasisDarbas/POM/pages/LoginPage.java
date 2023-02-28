@@ -8,15 +8,15 @@ public class LoginPage {
 
 
     public static void inputUserName(String text) {
-        Common.sendKeysToElement(Locators.LoginFields.inputUsernameLocator, text);
+        Common.sendKeysToElement(Locators.LoginPage.inputUsernameLocator, text);
     }
 
     public static void inputPassword(String text) {
-        Common.sendKeysToElement(Locators.LoginFields.passwordLocator, text);
+        Common.sendKeysToElement(Locators.LoginPage.passwordLocator, text);
     }
 
     public static void clickToLogin() {
-        Common.clickElement(Locators.LoginFields.submitLocator);
+        Common.clickElement(Locators.LoginPage.submitLocator);
     }
 
     public static void sleep(int miliSeconds) {
@@ -24,6 +24,6 @@ public class LoginPage {
     }
 
     public static String checkLoginMessage() {
-        return Common.getElementText(Locators.LoginFields.loginMessage);
+        return Common.getElementText(Locators.LoginPage.loginMessageLocator);
     }
 }

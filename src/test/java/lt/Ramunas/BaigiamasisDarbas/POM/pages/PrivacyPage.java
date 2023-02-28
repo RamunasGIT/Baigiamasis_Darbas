@@ -10,28 +10,27 @@ public class PrivacyPage {
         Common.sleep(miliSeconds);
     }
 
-    public static void clickOnCookieSettings() {
-        Common.waitForElementToBeVisible(Locators.PrivacyPageLocators.cookieSettingsLocator);
-        Common.clickElement(Locators.PrivacyPageLocators.cookieSettingsLocator);
-    }
+//    public static void clickOnCookieSettings() {
+//        Common.clickElement(Locators.PrivacyPage.cookieSettingsLocator);
+//    }
 
-    public static void clickOnEditCookieSetings() {
-        Common.clickElement(Locators.PrivacyPageLocators.editCookieSettingsLocator);
+    public static void clickOnEditCookieSettings() {
+        Common.clickElement(Locators.PrivacyPage.editCookieSettingsLocator);
     }
 
     public static void clickOnCookieRadioButton() {
-        Common.clickElement(Locators.PrivacyPageLocators.cookiesRadioButtonLocator);
+        Common.clickElement(Locators.PrivacyPage.cookiesRadioButtonLocator);
     }
 
     public static void clickOnAgreeButton() {
-        Common.clickElement(Locators.PrivacyPageLocators.agreeButtonLocator);
+        Common.clickElement(Locators.PrivacyPage.agreeButtonLocator);
     }
 
     public static boolean checkCookieRadioButton() {
-        return Common.getAttributText(Locators.PrivacyPageLocators.cookiesRadioButtonCheckedLocator);
+        return Common.getAttributeText(Locators.PrivacyPage.cookiesRadioButtonCheckedLocator);
     }
 
     public static void clickOnHomeLogo() {
-        Common.clickElement(Locators.PrivacyPageLocators.homeLogoLocator);
+        Common.clickElement(Locators.PrivacyPage.homeLogoLocator);
     }
 }

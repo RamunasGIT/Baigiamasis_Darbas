@@ -4,48 +4,42 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
-
-    public class LoginFields {
+    public class LoginPage {
         public static By inputUsernameLocator = By.xpath("//input[@name='username']");
         public static By passwordLocator = By.xpath("//input[@type='password']");
         public static By submitLocator = By.xpath("//button[@type='submit']");
-        public static By loginMessage = By.xpath("//div[@aria-hidden='false']//div[@class='_content']");
+        public static By loginMessageLocator = By.xpath("//div[@aria-hidden='false']//div[@class='_content']");
     }
 
-
-    public class TicketsSearchField {
-        public static By FromField = //put from value
+    public class TicketsPage {
+        public static By fromFieldLocator =
                 By.xpath("//input[@aria-labelledby='stop-search-select-label-ticket-origin']");
-        public static By ToField = //put to destination value
+        public static By toFieldLocator =
                 By.xpath("//input[@aria-labelledby='stop-search-select-label-ticket-destination']");
-        public static By travelDateField =
+        public static By travelDateFieldLocator =
                 By.xpath("//div[4]/div/button");
-        public static By travelDateMonth = By.xpath("//button[@aria-label='next month']");
-        public static By travelDateDay = By.xpath("//div[@class='DayPicker-Day' and @aria-label='Tre 2023 m. kovo 8 d.']");
-        public static By travelSearch = By.xpath("//button[@class='sc-gb70f5-0 hEoOvn sc-2p7noq-0 hoOFwQ no-hc base']");
+        public static By travelDateMonthLocator = By.xpath("//button[@aria-label='next month']");
+        public static By travelDateDayLocator = By.xpath("//div[@class='DayPicker-Day' and @aria-label='Tre 2023 m. kovo 8 d.']");
+        public static By travelSearchLocator = By.xpath("//button[@class='sc-gb70f5-0 hEoOvn sc-2p7noq-0 hoOFwQ no-hc base']");
     }
 
-    public class PromotionField {
-        public static By buttonField = //promotion button field
+    public class HomePage {
+        public static By buttonFieldLocator =
                 By.xpath("//div[@class='sc-1x9p1xi-1 busGTG']/button[@class='sc-gb70f5-0 sc-lfu3w-0 ldiCwA fzfVgd']");
-        public static By promoInputField = By.xpath("//input[@name='promo-code']");//promo code input field
-        public static By buttonActivatePromotion =
+        public static By promoInputFieldLocator = By.xpath("//input[@name='promo-code']");
+        public static By buttonActivatePromotionLocator =
                 By.xpath("//button[@class='sc-gb70f5-0 sc-gb70f5-2 ldiCwA dNZMnJ sc-atzxhw-0 kuBndY primary']");
-        public static By promoOutputMessage = // promo output message field
+        public static By promoOutputMessageLocator = // promo output message field
                 By.xpath("//div[@aria-hidden='false']//div[contains(text(), 'Įvestas akcijos kodas neteisingas')]");
-    }
-
-    public class LanguageBar {
-        public static By buttonOpenLanguageMenu = By.xpath("//button[@aria-label='locale switcher']");
-        public static By buttonEnglishLanguage = By.xpath("//*[@aria-labelledby='label_locale_en']");
-        public static By languageStatus =
+        public static By buttonOpenLanguageMenuLocator = By.xpath("//button[@aria-label='locale switcher']");
+        public static By buttonEnglishLanguageLocator = By.xpath("//*[@aria-labelledby='label_locale_en']");
+        public static By languageStatusLocator =
                 By.xpath("//button[@aria-label='locale switcher']//span[@class='_label']");
-        public static By buttonLithunianLanguage = By.xpath("//*[@aria-labelledby='label_locale_lt']");
+        public static By buttonLithuanianLanguageLocator = By.xpath("//*[@aria-labelledby='label_locale_lt']");
     }
 
-    public class PrivacyPageLocators {
-
-        public static By cookieSettingsLocator = By.xpath("//button[@aria-label='Redaguoti slapukų nustatymus']");
+    public class PrivacyPage {
+        //   public static By cookieSettingsLocator = By.xpath("//button[@aria-label='Redaguoti slapukų nustatymus']");
         public static By editCookieSettingsLocator =
                 By.xpath("//button[@class='button inverted secondary'][2]");
         public static By cookiesRadioButtonLocator = By.xpath("//span[contains(text(), 'Analitikos slapukai')]");

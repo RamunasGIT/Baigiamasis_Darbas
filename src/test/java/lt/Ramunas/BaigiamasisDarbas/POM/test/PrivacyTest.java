@@ -17,7 +17,7 @@ public class PrivacyTest extends BaseTest {
         boolean expectedResult = true;
         boolean actualResult;
 
-        PrivacyPage.clickOnEditCookieSetings();
+        PrivacyPage.clickOnEditCookieSettings();
         PrivacyPage.clickOnCookieRadioButton();
         actualResult = PrivacyPage.checkCookieRadioButton();
         PrivacyPage.clickOnAgreeButton();

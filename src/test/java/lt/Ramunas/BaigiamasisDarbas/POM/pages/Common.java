@@ -22,13 +22,17 @@ public class Common {
         Driver.closeDriver();
     }
 
+    public static void letsWait(By locator) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
     private static WebElement getElement(By locator) {
         return getDriver().findElement(locator);
     }
 
     public static void clickElement(By locator) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        letsWait(locator);
         getElement(locator).click();
     }
 
@@ -40,9 +44,9 @@ public class Common {
         return getElement(locator).getText();
     }
 
-    public static void sleep(int miliSeconds) {
+    public static void sleep(int milliSeconds) {
         try {
-            Thread.sleep(miliSeconds);
+            Thread.sleep(milliSeconds);
         } catch (InterruptedException e) {
             e.printStackTrace();
             Thread.currentThread().interrupt();
@@ -53,12 +57,7 @@ public class Common {
         return getDriver().getCurrentUrl();
     }
 
-    public static boolean getAttributText(By locator) {
+    public static boolean getAttributeText(By locator) {
         return Boolean.parseBoolean(getElement(locator).getAttribute("aria-checked"));
-    }
-
-    public static void waitForElementToBeVisible(By locator) {
-        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }
