@@ -13,8 +13,6 @@ import static lt.Ramunas.BaigiamasisDarbas.POM.utils.Driver.setDriver;
 
 
 public class Common {
-
-
     public static void openUrl(String link) {
         setDriver();
         getDriver().get(link);
@@ -24,14 +22,14 @@ public class Common {
         Driver.closeDriver();
     }
 
-    public static void clickElement(By locator) {
-        getElement(locator).click();
+    private static WebElement getElement(By locator) {
+        return getDriver().findElement(locator);
     }
 
-    private static WebElement getElement(By locator) {
+    public static void clickElement(By locator) {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
-        return getDriver().findElement(locator);
+        getElement(locator).click();
     }
 
     public static void sendKeysToElement(By locator, String text) {
@@ -53,5 +51,14 @@ public class Common {
 
     public static String getURL() {
         return getDriver().getCurrentUrl();
+    }
+
+    public static boolean getAttributText(By locator) {
+        return Boolean.parseBoolean(getElement(locator).getAttribute("aria-checked"));
+    }
+
+    public static void waitForElementToBeVisible(By locator) {
+        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }

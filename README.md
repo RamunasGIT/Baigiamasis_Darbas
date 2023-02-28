@@ -13,21 +13,22 @@
 9. *Pasidalinti Git repository nuoroda*
 -->
 
+<center> -- README.md -- </center>
+
 ## **README.md content:**<br>
 
 * Link to the test page
 * Descriptions of test scenarios and their steps
-* README.md syntax in link
 
 ### Link to the test page:
 
-* Link to the test page: [ https://ltglink.lt/](https://ltglink.lt/)
+* Tests were made in page: [ https://ltglink.lt/](https://ltglink.lt/)
 
 ### Descriptions of test scenarios and their steps:
 
 1. Test: "FakePromoCodeTest"<br>
-   ``Test will try to use fake promotion code and check what message
-   will be given``
+>Test will try to use fake promotion code and check what message
+   will be given
 
 - Open Chrome web browser with url: https://ltglink.lt/
 - Click on promotion button "Naudoti akcijos kodą"
@@ -42,7 +43,7 @@ Expected result: After use of fake promo code the webpage will show message that
 the code is wrong: "Įvestas akcijos kodas neteisingas"
 
 2. Test: "ChangeLanguageTesting"<br>
-   ``Test will switch between Lithuanian and English languages and check if it will happen``
+>Test will switch between Lithuanian and English languages and check if it will happen
 
 - Open Chrome web browser with url: https://ltglink.lt/
 - Click on language bar to open language menu
@@ -61,8 +62,8 @@ the code is wrong: "Įvestas akcijos kodas neteisingas"
 Expected result: Webpage language will be successfully switched between Lithuanian and English languages and will load
 back to Lithuanian language
 
-3. Test: SearchForTicketsTest
-   ``This test will fill travel data to search fields and activate search button``
+3. Test: SearchForTicketsTest<br>
+>This test will fill travel data to search fields and activate search button
 
 - Open tickets webpage: http://bilietas.ltglink.lt
 - Fill travel "From" field
@@ -79,8 +80,8 @@ back to Lithuanian language
 
 Expected result: Expected that search results will show Vilnius-Kaunas train ticket list on 2023-03-08 date
 
-4. Test: "FakeLoginTesting"
-   `` This test will fill invalid login data, puch login button and check message from webpage``
+4. Test: "FakeLoginTesting"<br>
+> This test will fill invalid login data, puch login button and check message from webpage
 
 - Open login webpage: https://bilietas.ltglink.lt/account/login
 - Put Username "Ramūnas" to username field.
@@ -94,8 +95,22 @@ Expected result: Expected that search results will show Vilnius-Kaunas train tic
 
 Expected result: when put invalid login data Loginwebpage should show message - "Invalid login credentials".
 
-5. Test:
+5. Test: "PrivacyTest"<br>
+>Test will change cookie setting and check if change is set
 
-Expected result:
+- Open Privacy webpage: https://ltglink.lt/privatumo-pranesimas
+- Click on edit CookieSettings button
+- Click on radiobutton to check Analytical cookies
+- Check if the cookie radio button is on and put it to "actualResul"
+- Click cookies bar agree button to close the bar
+- Go to home page
+- Compare if actualResult contains expectedResult
+- If any failure - make screenshot.
+- Close browser
 
-### README.md syntax in link
+Expected result: Analytical cookies radio button will be checked succsessfully
+
+<br><br>
+<center>
+-- End of README.md --
+</center>

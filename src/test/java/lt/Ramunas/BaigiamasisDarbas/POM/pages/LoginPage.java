@@ -1,6 +1,6 @@
 package lt.Ramunas.BaigiamasisDarbas.POM.pages;
 
-public class LoginTestPage {
+public class LoginPage {
 
     public static void open() {
         Common.openUrl("https://bilietas.ltglink.lt/account/login");
@@ -8,7 +8,7 @@ public class LoginTestPage {
 
 
     public static void inputUserName(String text) {
-        Common.sendKeysToElement(Locators.LoginFields.usernameLocator, text);
+        Common.sendKeysToElement(Locators.LoginFields.inputUsernameLocator, text);
     }
 
     public static void inputPassword(String text) {

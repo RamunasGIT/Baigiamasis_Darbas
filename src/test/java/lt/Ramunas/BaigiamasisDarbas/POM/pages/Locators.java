@@ -6,7 +6,7 @@ public class Locators {
 
 
     public class LoginFields {
-        public static By usernameLocator = By.xpath("//input[@name='username']");
+        public static By inputUsernameLocator = By.xpath("//input[@name='username']");
         public static By passwordLocator = By.xpath("//input[@type='password']");
         public static By submitLocator = By.xpath("//button[@type='submit']");
         public static By loginMessage = By.xpath("//div[@aria-hidden='false']//div[@class='_content']");
@@ -42,4 +42,16 @@ public class Locators {
                 By.xpath("//button[@aria-label='locale switcher']//span[@class='_label']");
         public static By buttonLithunianLanguage = By.xpath("//*[@aria-labelledby='label_locale_lt']");
     }
+
+    public class PrivacyPageLocators {
+
+        public static By cookieSettingsLocator = By.xpath("//button[@aria-label='Redaguoti slapukų nustatymus']");
+        public static By editCookieSettingsLocator =
+                By.xpath("//button[@class='button inverted secondary'][2]");
+        public static By cookiesRadioButtonLocator = By.xpath("//span[contains(text(), 'Analitikos slapukai')]");
+        public static By agreeButtonLocator = By.xpath("//button[contains(text(), 'Sutinku')]");
+        public static By cookiesRadioButtonCheckedLocator = By.xpath("//label[@class='checkbox checked']");
+        public static By homeLogoLocator = By.xpath("//a[@class='_logo']");
+    }
 }
+
