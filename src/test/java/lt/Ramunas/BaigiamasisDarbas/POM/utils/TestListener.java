@@ -24,7 +24,7 @@ public class TestListener implements ITestListener {
             File screenshotFile = screenshot.getScreenshotAs(OutputType.FILE);
             String directory = "./screenshots/";
             LocalDateTime dateTime = LocalDateTime.now();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_SSS");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
             File screenshotFinalFile = new File(
                     directory + dateTime.format(formatter) + "_screenshot" + ".jpg"
             );

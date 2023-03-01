@@ -6,10 +6,6 @@ public class PrivacyPage {
         Common.openUrl("https://ltglink.lt/privatumo-pranesimas");
     }
 
-    public static void sleep(int miliSeconds) {
-        Common.sleep(miliSeconds);
-    }
-
     public static void clickOnEditCookieSettings() {
         Common.clickElementAction(Locators.PrivacyPage.editCookieSettingsLocator);
     }

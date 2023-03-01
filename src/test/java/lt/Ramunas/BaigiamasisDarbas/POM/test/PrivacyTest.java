@@ -23,6 +23,6 @@ public class PrivacyTest extends BaseTest {
         PrivacyPage.clickOnAgreeButton();
         PrivacyPage.clickOnHomeLogo();
 
-        Assert.assertTrue(actualResult == expectedResult);
+        Assert.assertEquals(expectedResult, actualResult);
     }
 }

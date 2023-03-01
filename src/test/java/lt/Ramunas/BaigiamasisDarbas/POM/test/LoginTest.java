@@ -15,12 +15,12 @@ public class LoginTest extends BaseTest{
     @Test
     public void FakeLoginTesting() {
         String loginName = "Ramūnas";
-        String loginPasword = "!123456789";
+        String loginPassword = "!123456789";
         String expectedResult = "Neteisingi prisijungimo duomenys";
         String actualResult;
 
         LoginPage.inputUserName(loginName);
-        LoginPage.inputPassword(loginPasword);
+        LoginPage.inputPassword(loginPassword);
         LoginPage.clickToLogin();
         LoginPage.sleep(1000);
         actualResult = LoginPage.checkLoginMessage();

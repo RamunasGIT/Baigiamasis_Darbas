@@ -13,7 +13,7 @@
 9. *Pasidalinti Git repository nuoroda*
 -->
 
-<center> -- README.md -- </center>
+<p align="center"> -- README.md -- </p>
 
 ## **README.md content:**<br>
 
@@ -117,6 +117,6 @@ Expected result: when put invalid login data Loginwebpage should show message - 
 Expected result: Analytical cookies radio button will be checked succsessfully
 
 <br><br>
-<center>
+<p align="center">
 -- End of README.md --
-</center>
+</p>
