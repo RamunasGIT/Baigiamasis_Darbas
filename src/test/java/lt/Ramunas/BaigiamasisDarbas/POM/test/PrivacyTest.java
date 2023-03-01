@@ -22,8 +22,7 @@ public class PrivacyTest extends BaseTest {
         actualResult = PrivacyPage.checkCookieRadioButton();
         PrivacyPage.clickOnAgreeButton();
         PrivacyPage.clickOnHomeLogo();
-        PrivacyPage.sleep(1000);
-        //PrivacyTestPage.clickOnCookieSettings();
+
         Assert.assertTrue(actualResult == expectedResult);
     }
 }

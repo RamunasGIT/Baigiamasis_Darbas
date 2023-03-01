@@ -3,6 +3,7 @@ package lt.Ramunas.BaigiamasisDarbas.POM.pages;
 import lt.Ramunas.BaigiamasisDarbas.POM.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -53,11 +54,14 @@ public class Common {
         }
     }
 
-    public static String getURL() {
-        return getDriver().getCurrentUrl();
-    }
-
     public static boolean getAttributeText(By locator) {
         return Boolean.parseBoolean(getElement(locator).getAttribute("aria-checked"));
+    }
+
+    public static void clickElementAction(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(getElement(locator));
+        actions.click();
+        actions.perform();
     }
 }

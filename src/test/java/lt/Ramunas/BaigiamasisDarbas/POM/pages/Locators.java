@@ -4,26 +4,28 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
-    public class LoginPage {
+    public static class LoginPage {
         public static By inputUsernameLocator = By.xpath("//input[@name='username']");
         public static By passwordLocator = By.xpath("//input[@type='password']");
         public static By submitLocator = By.xpath("//button[@type='submit']");
         public static By loginMessageLocator = By.xpath("//div[@aria-hidden='false']//div[@class='_content']");
     }
 
-    public class TicketsPage {
+    public static class TicketsPage {
         public static By fromFieldLocator =
                 By.xpath("//input[@aria-labelledby='stop-search-select-label-ticket-origin']");
         public static By toFieldLocator =
                 By.xpath("//input[@aria-labelledby='stop-search-select-label-ticket-destination']");
         public static By travelDateFieldLocator =
                 By.xpath("//div[4]/div/button");
-        public static By travelDateMonthLocator = By.xpath("//button[@aria-label='next month']");
-        public static By travelDateDayLocator = By.xpath("//div[@class='DayPicker-Day' and @aria-label='Tre 2023 m. kovo 8 d.']");
+        public static By travelDateDayLocator = By.xpath("//div[@aria-label='Pen 2023 m. kovo 31 d.']");
         public static By travelSearchLocator = By.xpath("//button[@class='sc-gb70f5-0 hEoOvn sc-2p7noq-0 hoOFwQ no-hc base']");
+        public static By sortingLocator = By.xpath("//div[@class='btn sort-btn _has-right-icon']");
+        public static By selectSortByFastestLocator = By.xpath("(//*[@id='label_search_sort_by-undefined'])[2]");
+        public static By selectedSortingLocator = By.xpath("//*[@class='_label _selected']");
     }
 
-    public class HomePage {
+    public static class HomePage {
         public static By buttonFieldLocator =
                 By.xpath("//div[@class='sc-1x9p1xi-1 busGTG']/button[@class='sc-gb70f5-0 sc-lfu3w-0 ldiCwA fzfVgd']");
         public static By promoInputFieldLocator = By.xpath("//input[@name='promo-code']");
@@ -38,8 +40,7 @@ public class Locators {
         public static By buttonLithuanianLanguageLocator = By.xpath("//*[@aria-labelledby='label_locale_lt']");
     }
 
-    public class PrivacyPage {
-        //   public static By cookieSettingsLocator = By.xpath("//button[@aria-label='Redaguoti slapukų nustatymus']");
+    public static class PrivacyPage {
         public static By editCookieSettingsLocator =
                 By.xpath("//button[@class='button inverted secondary'][2]");
         public static By cookiesRadioButtonLocator = By.xpath("//span[contains(text(), 'Analitikos slapukai')]");

@@ -23,6 +23,7 @@ public class HomeTest extends BaseTest {
         HomePage.clickToActivatePromotionCodeButton();
         HomePage.sleep(1000);
         actualResult = HomePage.readPromotionCodeMessage();
+
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
@@ -36,11 +37,14 @@ public class HomeTest extends BaseTest {
         HomePage.clickOnEnLanguage();
         HomePage.sleep(1000);
         actualResult = HomePage.checkLanguageName();
+
         Assert.assertTrue(actualResult.contains(expectedResultEN));
+
         HomePage.clickOnLanguageBar();
         HomePage.clickOnLtLanguage();
         HomePage.sleep(1000);
         actualResult = HomePage.checkLanguageName();
+
         Assert.assertTrue(actualResult.contains(expectedResultLT));
     }
 

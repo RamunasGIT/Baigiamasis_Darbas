@@ -66,22 +66,23 @@ back to Lithuanian language
 
 3. Test: SearchForTicketsTest<br>
 
-> This test will fill travel data to search fields and activate search button
+> This test will fill travel data to search fields and activate search button after that test will make sorting list
+> by fastest train. After that test will check it.
 
 - Open tickets webpage: http://bilietas.ltglink.lt
-- Fill travel "From" field
-- Fill travel "To" field
-- Clink on Date field
-- Click on month change button
-- Then choose travel date 2023-03-08
-- Click on search button
-- Delay to show search result
-- Put current url to actualResult
-- Check if current url contains expected search date.
+- Fill travel "From" field.
+- Fill travel "To" field.
+- Clink on Date field.
+- Click on month change button.
+- Then choose travel date 2023-03-31.
+- Click on search button.
+- In the search list change sorting by fastest train.
+- Check if current sorting contains expected sorting.
 - If any failure - make screenshot.
-- Close browser
+- Close browser.
 
-Expected result: Expected that search results will show Vilnius-Kaunas train ticket list on 2023-03-08 date
+Expected result: Expected that tickets search results will show Vilnius-Kaunas train ticket list on 2023-03-31 date and
+check if sorting is by fastest train.
 
 4. Test: "FakeLoginTesting"<br>
 

@@ -1,6 +1,5 @@
 package lt.Ramunas.BaigiamasisDarbas.POM.test;
 
-import lt.Ramunas.BaigiamasisDarbas.POM.pages.HomePage;
 import lt.Ramunas.BaigiamasisDarbas.POM.pages.TicketsPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -17,15 +16,15 @@ public class TicketsTest extends BaseTest {
     public void SearchForTickets() {
         String fromOrigin = "Vilnius";
         String toDestination = "Kaunas";
-        String expectedResult = "2023-03-08";
+        String expectedResult = "Pirmiausia greičiausi";
         String actualResult;
 
         TicketsPage.inputTravelFrom(fromOrigin);
         TicketsPage.inputTravelTo(toDestination);
         TicketsPage.clickOnTravelDate();
         TicketsPage.clickSearchButton();
-        HomePage.sleep(2000);
-        actualResult = TicketsPage.checkSearchResult();
+        TicketsPage.sortByFastest();
+        actualResult = TicketsPage.checkSortingByFastestResult();
 
         Assert.assertTrue(actualResult.contains(expectedResult));
 

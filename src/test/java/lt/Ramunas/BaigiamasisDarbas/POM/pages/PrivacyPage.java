@@ -10,12 +10,8 @@ public class PrivacyPage {
         Common.sleep(miliSeconds);
     }
 
-//    public static void clickOnCookieSettings() {
-//        Common.clickElement(Locators.PrivacyPage.cookieSettingsLocator);
-//    }
-
     public static void clickOnEditCookieSettings() {
-        Common.clickElement(Locators.PrivacyPage.editCookieSettingsLocator);
+        Common.clickElementAction(Locators.PrivacyPage.editCookieSettingsLocator);
     }
 
     public static void clickOnCookieRadioButton() {

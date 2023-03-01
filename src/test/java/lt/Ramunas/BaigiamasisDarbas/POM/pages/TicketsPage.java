@@ -16,7 +16,6 @@ public class TicketsPage {
 
     public static void clickOnTravelDate() {
         Common.clickElement(Locators.TicketsPage.travelDateFieldLocator);
-        Common.clickElement(Locators.TicketsPage.travelDateMonthLocator);
         Common.clickElement(Locators.TicketsPage.travelDateDayLocator);
     }
 
@@ -24,7 +23,14 @@ public class TicketsPage {
         Common.clickElement(Locators.TicketsPage.travelSearchLocator);
     }
 
-    public static String checkSearchResult() {
-        return Common.getURL();
+    public static String checkSortingByFastestResult() {
+        Common.clickElementAction(Locators.TicketsPage.sortingLocator);
+        return Common.getElementText(Locators.TicketsPage.selectedSortingLocator);
+    }
+
+    public static void sortByFastest() {
+        Common.clickElementAction(Locators.TicketsPage.sortingLocator);
+        Common.clickElementAction(Locators.TicketsPage.selectSortByFastestLocator);
+
     }
 }
